@@ -6,7 +6,6 @@ import pl.koziarz.specificationexample.abstracts.specification.AbstractSpecifica
 import pl.koziarz.specificationexample.abstracts.specification.AndSpecification;
 
 import pl.koziarz.specificationexample.abstracts.specification.ISpecification;
-import pl.koziarz.specificationexample.abstracts.specification.OrSpecification;
 import pl.koziarz.specificationexample.domain.entity.Child;
 import pl.koziarz.specificationexample.domain.entity.Toy;
 import pl.koziarz.specificationexample.domain.entity.ToyType;
@@ -33,14 +32,15 @@ public class KindergartenApp {
 		Child johny = new Child("Johny",7);
 		johny.getFavouriteToys().add(ferrari);
 		johny.getFavouriteToys().add(laFireTruck);
+                
+                Child max = new Child("Max",8);
+		max.getFavouriteToys().add(policeCar);
+		max.getFavouriteToys().add(laFireTruck);
 		
 		Child johny2 = new Child("Johny",10);
 		johny2.getFavouriteToys().add(policeCar);
 		
-		Child max = new Child("Max",8);
-		max.getFavouriteToys().add(policeCar);
-		max.getFavouriteToys().add(laFireTruck);
-		
+				
 		Child jenny = new Child("Jenny",5);
 		jenny.getFavouriteToys().add(timmy);
 		
@@ -89,7 +89,7 @@ public class KindergartenApp {
 		System.out.println("\nSchool Children");
 		printSpecified(children, spec_schoolchildren);
                 
-                // el daño de edgar
+                // Prueba
                 
                 ISpecification<Child> spec = new ChildLikesSpecifiedToySpecification(new ToyColorSpecification("Red"));
                 System.out.println("\nNew Specification");
